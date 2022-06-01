@@ -10,8 +10,10 @@ for i in range(length - 1):
 if number < 0:
     mynumber = mynumber * -1
 if mynumber > 5:
-    print("Last digit of {:d} is {:d} and is greater than 5".format(number, mynumber))
+    print("Last digit of {:d} is {:d} ".format(number, mynumber), end="")
+    print("and is greater than 5")
 elif mynumber < 6 and mynumber != 0:
-    print("Last digit of {:d} is {:d} and is less than 6 and not 0".format(number, mynumber))
+    print("Last digit of {:d} is {:d} ".format(number, mynumber), end="")
+    print("and is less than 6 and not 0")
 else:
     print("Last digit of {:d} is {:d} and is 0".format(number, mynumber))
