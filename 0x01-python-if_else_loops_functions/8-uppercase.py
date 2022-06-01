@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-def islower(c):
-    if ord(c) > 96:
-        return True
-    else:
-        return False
+def uppercase(str):
+    length = len(str)
+    for i in range(length):
+        digit = ord(str[i])
+        if digit > 96 and digit < 123:
+            digit = digit - 32
+        print("{:c}".format(digit), end="")
+    print("")
