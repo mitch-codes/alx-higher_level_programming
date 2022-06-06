@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("hello")
+from print_list_integer import print_list_integer
+print_list_integer([1, 2, 3, 4])
