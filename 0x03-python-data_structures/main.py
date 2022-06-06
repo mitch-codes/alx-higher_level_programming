@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-from print_list_integer import print_list_integer
-print_list_integer([1, 2, 3, 4])
+from element_at import element_at
+element_at([1, 2, 3, 4], 1)
