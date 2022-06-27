@@ -8,4 +8,4 @@ def safe_print_list(my_list=[], x=0):
             j = j + 1
         except IndexError:
             return j
-    return i
+    return j
