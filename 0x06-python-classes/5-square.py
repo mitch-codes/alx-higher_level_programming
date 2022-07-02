@@ -19,6 +19,11 @@ class Square:
             __size (int): the __size of the new square.
 
         """
+        self.__size = size
+
+    @property
+    def size(self):
+        """instantiation with optional size of square"""
         return self.__size
 
     @size.setter
