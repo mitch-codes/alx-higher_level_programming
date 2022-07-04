@@ -7,5 +7,5 @@ def inherits_from(obj, a_class):
     is an inherited from a class
 
     """
-    result = issubclass(obj, a_class)
+    result = issubclass(type(obj), a_class)
     return result
