@@ -2,7 +2,7 @@
 """author: Mitch"""
 
 
-def is_same_class(obj, a_class):
+def is_kind_of_class(obj, a_class):
     """a function to determine if an object
     is a method of a class
 
