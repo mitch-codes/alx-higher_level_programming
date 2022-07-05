@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """a method to read files"""
 
+
 def read_file(filename=""):
     """read file in utf-8"""
 
