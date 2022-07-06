@@ -2,7 +2,7 @@
 """a function to write into files files"""
 
 
-def read_file(filename="", text=""):
+def write_file(filename="", text=""):
     """write content into file file in utf-8"""
 
     with open(filename, mode='w', encoding="UTF-8") as f:
