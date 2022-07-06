@@ -7,6 +7,4 @@ def append_write(filename="", text=""):
 
     with open(filename, mode='a', encoding="UTF-8") as f:
         my_data = f.write(text)
-        print(my_data)
         return my_data
-
