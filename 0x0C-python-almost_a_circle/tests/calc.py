@@ -6,3 +6,8 @@ def add(x, y):
     """adds two numbers"""
 
     return x + y
+
+def devide(x, y):
+    """devides two numbers"""
+
+    return x / y
