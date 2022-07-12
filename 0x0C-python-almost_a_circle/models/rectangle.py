@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """inherit a class"""
-from base import Base
+
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -19,6 +20,7 @@ class Rectangle(Base):
             height(int): value of height
             x(int): x value
             y(int): y value
+            id(int): the id
 
         """
 
