@@ -1,1 +1,1 @@
-#!/usr/bin/python3
+"""create a python package"""
