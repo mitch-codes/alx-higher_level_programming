@@ -4,10 +4,23 @@ from base import Base
 
 
 class Rectangle(Base):
-    """class to define rectangle"""
+    """class to define rectangle
+
+    Args:
+        Base(model): the inherited class
+
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """set attributes"""
+        """set attributes
+        
+        Args:
+            width(int): value of width
+            height(int): value of height
+            x(int): x value
+            y(int): y value
+
+        """
 
         super().__init__(id)
 
@@ -42,7 +55,12 @@ class Rectangle(Base):
     
     @width.setter
     def width(self, value):
-        """setter gets width"""
+        """setter gets width
+        
+        Args:
+            value(int): value of width
+
+        """
         if isinstance(value, int) is not True:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -56,7 +74,12 @@ class Rectangle(Base):
     
     @height.setter
     def height(self, value):
-        """setter gets width"""
+        """setter sets width
+        
+        Args:
+            value(int): value of height
+
+        """
         if isinstance(value, int) is not True:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -70,7 +93,12 @@ class Rectangle(Base):
     
     @x.setter
     def x(self, value):
-        """setter gets width"""
+        """setter gets widt
+        
+        Args:
+            value(int): x value
+
+        """
         if isinstance(value, int) is not True:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -84,7 +112,12 @@ class Rectangle(Base):
     
     @y.setter
     def y(self, value):
-        """setter gets width"""
+        """setter gets width
+
+        Args:
+            value(int): y value
+
+        """
         if isinstance(value, int) is not True:
             raise TypeError("y must be an integer")
         if value < 0:
