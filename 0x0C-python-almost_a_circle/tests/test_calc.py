@@ -17,6 +17,8 @@ class TestClass(unittest.TestCase):
         self.assertEqual(calc.devide(1, -1), -1)
         self.assertEqual(calc.devide(-1, -1), 1)
 
+        self.assertRaises(ValueError, calc.devide, 10, 0)
+
 
 if "__name__" == "__main__":
     unittest.main()
