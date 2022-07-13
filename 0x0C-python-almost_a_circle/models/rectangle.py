@@ -144,5 +144,12 @@ class Rectangle(Base):
 
     def __str__(self):
         """overide str method"""
-        return "[Rectangle] ("+str(self.__id)+") "+str(self.__x)+"/"+str(self.__y)+" - "\
-    +str(self.__width)+"/"+str(self.__height)
+        myid = str(self.__id)
+        if myid == "None":
+            myid = ""
+        print("[Rectangle] (" + myid + ") " + str(self.__x) + "/"\
+            + str(self.__y) + " - " + str(self.__width) + "/"\
+            + str(self.__height))
+        return "[Rectangle] (" + myid + ") " + str(self.__x) + "/"\
+            + str(self.__y) + " - " + str(self.__width) + "/"\
+            + str(self.__height)
