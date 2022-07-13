@@ -132,10 +132,10 @@ class Rectangle(Base):
 
     def display(self):
         """display the rectangle graphically"""
-        for l in range(y):
+        for i in range(y):
             print()
         for i in range(self.__height):
-            for k in range(x):
+            for i in range(x):
                 print(" ", end="")
             for i in range(self.__width):
                 print("#", end="")
