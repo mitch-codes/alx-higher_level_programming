@@ -147,9 +147,6 @@ class Rectangle(Base):
         myid = str(self.__id)
         if myid == "None":
             myid = ""
-        print("[Rectangle] (" + myid + ") " + str(self.__x) + "/"\
-            + str(self.__y) + " - " + str(self.__width) + "/"\
-            + str(self.__height))
         return "[Rectangle] (" + myid + ") " + str(self.__x) + "/"\
             + str(self.__y) + " - " + str(self.__width) + "/"\
             + str(self.__height)
