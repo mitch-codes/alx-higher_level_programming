@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """inherit a class"""
 
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -49,6 +49,7 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
+        self.__id = id
 
     @property
     def width(self):
@@ -140,3 +141,7 @@ class Rectangle(Base):
             for i in range(self.__width):
                 print("#", end="")
             print()
+    
+    def __str__(self):
+        """overide str method"""
+        return "[Rectangle] ("+str(self.__id)+") "+str(self.__x)+"/"+str(self.__y)+" - "+str(self.__width)+"/"+str(self.__height)
