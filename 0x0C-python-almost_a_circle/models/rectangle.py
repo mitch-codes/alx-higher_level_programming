@@ -145,3 +145,24 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x,
                     self.__y, self.__width, self.__height)
+
+    def update(self, *args):
+        """update class attributes
+
+        Args:
+            args: atguments to be passed
+
+        """
+        listatr = []
+        for arg in args:
+            listatr.append(arg)
+        if listatr[0] is not None:
+            self.id = listatr[0]
+        if listatr[1] is not None:
+            self.__width = listatr[1]
+        if listatr[2] is not None:
+            self.__height = listatr[2]
+        if listatr[3] is not None:
+            self.__x = listatr[3]
+        if listatr[4] is not None:
+            self.__y = listatr[4]
