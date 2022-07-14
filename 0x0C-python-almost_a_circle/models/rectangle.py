@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """inherit a class"""
-
+import sys
+sys.path.append("..")
 from models.base import Base
 
 
@@ -150,3 +151,7 @@ class Rectangle(Base):
         return "[Rectangle] (" + myid + ") " + str(self.__x) + "/"\
             + str(self.__y) + " - " + str(self.__width) + "/"\
             + str(self.__height)
+
+
+r1 = Rectangle(4, 6, 2, 1, 12)
+print(r1)
