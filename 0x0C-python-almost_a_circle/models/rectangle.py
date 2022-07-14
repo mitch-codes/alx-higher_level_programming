@@ -157,7 +157,7 @@ class Rectangle(Base):
         for arg in args:
             listatr.append(arg)
         if listatr[0] is not None:
-            self.id = listatr[0]
+            super().__init__(listatr[0])
         if listatr[1] is not None:
             self.__width = listatr[1]
         if listatr[2] is not None:
