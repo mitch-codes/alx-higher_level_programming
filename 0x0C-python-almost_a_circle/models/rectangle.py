@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """inherit a class"""
+import sys
+sys.path.append("..")
 from models.base import Base
 
 
@@ -153,16 +155,15 @@ class Rectangle(Base):
             args: atguments to be passed
 
         """
-        listatr = []
-        for arg in args:
-            listatr.append(arg)
-        if listatr[0] is not None:
-            super().__init__(listatr[0])
-        if listatr[1] is not None:
-            self.__width = listatr[1]
-        if listatr[2] is not None:
-            self.__height = listatr[2]
-        if listatr[3] is not None:
-            self.__x = listatr[3]
-        if listatr[4] is not None:
-            self.__y = listatr[4]
+        if (args):
+            for i, j in enumerate(args):
+                if i == 0:
+                    self.id = j
+                if i == 1:
+                    self.__width = j
+                if i == 2:
+                    self.__height = j
+                if i == 3:
+                    self.__x = j
+                if i == 4:
+                    self.__y = j
