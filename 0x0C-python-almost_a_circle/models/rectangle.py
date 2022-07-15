@@ -165,3 +165,6 @@ class Rectangle(Base):
                     self.__x = j
                 if i == 4:
                     self.__y = j
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
