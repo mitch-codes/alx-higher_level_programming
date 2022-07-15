@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """inherit a class"""
-import sys
-sys.path.append("..")
 from models.base import Base
 
 
