@@ -5,10 +5,7 @@
 
 
 class Square:
-    """Square class with a private attribute -
-    size.
-
-    """
+    """Square class with a private attribute size."""
 
     def __init__(self, size=0, position=(0, 0)):
         """Initializes the size variable as a private
