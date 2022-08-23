@@ -1,1 +1,2 @@
-"""create a python package"""
+"""Initializing the python model
+"""
