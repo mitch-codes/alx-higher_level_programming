@@ -1,12 +1,16 @@
 #!/usr/bin/python3
 
+
 def safe_print_list(my_list=[], x=0):
-    j = 0
-    for i in range(x):
+    """
+    A function that prints x elements of a list.
+    """
+    list_count = 0
+    for element in range(x):
         try:
-            print("{}".format(my_list[i]))
-            j = j + 1
+            print("{:d}".format(my_list[element]), end="")
+            list_count += 1
         except IndexError:
-            return j
-        finally:
-            return j
+            break
+    print("")
+    return list_count
