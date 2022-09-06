@@ -1,9 +1,9 @@
 #!/usr/bin/nodejs
 const a = process.argv[2];
-myString = '';
-for (j = 0; j < a; j++)
+let myString = '';
+for (let j = 0; j < a; j++)
 {
-for (i = 0; i < a; i++)
+for (let i = 0; i < a; i++)
 {
 myString = myString + 'x';
 }
