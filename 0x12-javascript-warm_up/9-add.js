@@ -1,7 +1,7 @@
 #!/usr/bin/nodejs
 function add (a, b)
 {
-c = parseInt(a) + parseInt(b);
+const c = parseInt(a) + parseInt(b);
 console.log(c);
 }
 
