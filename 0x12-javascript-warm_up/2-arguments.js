@@ -1,13 +1,8 @@
 #!/usr/bin/nodejs
-if (process.argv.length === 3) 
-{
+if (process.argv.length === 3) {
   console.log('Argument found');
-}
-else if (process.argv.length > 3)
-{
+} else if (process.argv.length > 3) {
   console.log('Arguments found');
-}
-else
-{
+} else {
   console.log('No argument');
 }
