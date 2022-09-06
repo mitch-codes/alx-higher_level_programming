@@ -1,13 +1,11 @@
 #!/usr/bin/nodejs
 const a = process.argv[2];
 let myString = '';
-for (let j = 0; j < a; j++)
+for (let j = 0; j < a; j++) {
+  for (let i = 0; i < a; i++)
 {
-for (let i = 0; i < a; i++)
-{
-myString = myString + 'x';
+myString = myString + 'X';
 }
 console.log(myString);
 myString = '';
 }
-
