@@ -1,0 +1,10 @@
+#!/usr/bin/nodejs
+const a = parseInt(process.argv[2]);
+if (isNaN(a))
+{
+console.log('Not a number');
+}
+else
+{
+console.log(a);
+}
