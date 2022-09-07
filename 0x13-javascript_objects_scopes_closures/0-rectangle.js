@@ -1,3 +1,2 @@
 #!/usr/bin/nodejs
-class Rectangle {
-}
+module.exports = class Rectangle {};
