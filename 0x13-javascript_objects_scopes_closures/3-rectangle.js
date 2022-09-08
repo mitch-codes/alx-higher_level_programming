@@ -10,8 +10,8 @@ module.exports = class Rectangle {
   }
   print() {
     let myString = '';
-    for (let j = 0; j < a; j++) {
-      for (let i = 0; i < a; i++) {
+    for (let j = 0; j < this.height; j++) {
+      for (let i = 0; i < this.width; i++) {
         myString = myString + 'X';
       }
       console.log(myString);
