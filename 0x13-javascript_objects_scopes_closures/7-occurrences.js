@@ -7,5 +7,5 @@ if (list[i] === searchElement) {
 count = count + 1;                                                                                                                      
 }                                                                                                                                       
 }                                                                                                                                       
-console.log(count);                                                                                                                     
+return count;                                                                                                                    
 };
