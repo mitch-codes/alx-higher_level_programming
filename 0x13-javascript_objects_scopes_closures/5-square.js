@@ -4,6 +4,6 @@ module.exports = class Square extends require('./4-rectangle.js') {
     if (size < 0) {
       size = undefined;
     }
-    super (size, size);
+    super(size, size);
   }
 };
