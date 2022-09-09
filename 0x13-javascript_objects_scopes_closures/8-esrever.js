@@ -6,4 +6,5 @@ let temp = list[i];
 list[i] = list[length - 1 - i];
 list[length - 1 - i] = temp;
 }
+  return list;
 };
