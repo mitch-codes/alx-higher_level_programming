@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-"""connect and view records usib=ng sqlalchemy"""
-import sqlalchemy
-import MySQLdd
+"""
+script that lists all State objects
+from the database hbtn_0e_6_usa"""
+import MySQLdb
 from sqlalchemy import create_engine
+import sys
 from model_state import Base, State
 import sys
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[1], sys.argv[3]), pool_pre_ping=True)
+    engine = sqlalchemy.create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[1], sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     session = Session(engine)
