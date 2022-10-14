@@ -3,6 +3,7 @@
 script that lists all State objects
 from the database hbtn_0e_6_usa"""
 import MySQLdb
+from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
 import sys
 from model_state import Base, State
