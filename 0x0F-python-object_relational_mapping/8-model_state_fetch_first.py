@@ -20,6 +20,5 @@ if __name__ == "__main__":
                                 )
     session = Session(engine)
     results = session.query(State).order_by(State.id).first()
-    for result in results:
-        print("{}: {}".format(result.id, result.name))
+    print("{}: {}".format(results.id, results.name))
     session.close()
