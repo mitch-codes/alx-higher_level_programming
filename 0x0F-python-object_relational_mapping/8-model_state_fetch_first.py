@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""connect to mysql to retrieve
-only one record"""
+"""
+script that lists all State objects
+from the database hbtn_0e_6_usa"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from model_state import Base, State
+
 
 if __name__ == "__main__":
     engine = create_engine(
@@ -17,5 +19,9 @@ if __name__ == "__main__":
                             pool_pre_ping=True
                                 )
     session = Session(engine)
-    for state in session.query(State).order_by(State.id).first():
-        print("{}: {}".format(state.id, state.name))
+    re = session.query(State).order_by(State.id).first()
+    if re is None:
+        print("Nothing")
+    else:
+        print("{}: {}".format(re.id, re.name))
+    session.close()
