@@ -1,21 +1,25 @@
 #!/usr/bin/python3
-"""connect to mysql to retrieve
-only one record"""
+""""
+display all the records of
+a database table"""
+from model_state import Base, State
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
-from model_state import Base, State
 
 if __name__ == "__main__":
-    engine = create_engine(
-                            'mysql+mysqldb://{}:{}@localhost/{}'
+    engine = create_engine()
+    Base.metadata.createall(
+                            "mysql+mysqldb://{}:{}@localhost/{}"
                             .format(
-                                        sys.argv[1],
-                                        sys.argv[2],
-                                        sys.argv[3]
-                                            ),
+                                    sya.argv[1],
+                                    sys.argv[2],
+                                    sys.argv[3],
+                                        ),
                             pool_pre_ping=True
                                 )
     session = Session(engine)
-    for state in session.query(State).orderby(state.id).all():
-        print("{}: {}".format(state.id, state.name))
+    results = session.query(State).order_by(State.id).first()
+    for result in results:
+        print("{}: {}".format(result.id, result.name))
+    session.close()
