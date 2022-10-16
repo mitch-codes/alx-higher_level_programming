@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """
 lists all State objects that contain the
@@ -6,6 +7,7 @@ import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from model_state import Base, State
+
 
 if __name__ == "__main__":
     engine = create_engine(
@@ -19,5 +21,7 @@ if __name__ == "__main__":
                                 )
     session = Session(engine)
     match = '%a%'
-    for state in session.query(State).filter(State.name.like(match))order_by(State.id).all():
-        print("{}: {}".format(state.id, state.name))
+    re = session.query(State).filter(State.name.like(match)).order_by(State.id)
+    for x in re:
+        print("{}: {}".format(x.id, x.name))
+    session.close()
