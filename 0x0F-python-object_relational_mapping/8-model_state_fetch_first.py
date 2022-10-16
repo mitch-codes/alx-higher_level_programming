@@ -11,7 +11,7 @@ from model_state import Base, State
 
 if __name__ == "__main__":
     engine = create_engine(
-                            'mysql+mysqldb://{}:{}@localhost/{}'
+                            "mysql+mysqldb://{}:{}@localhost/{}"
                             .format(
                                         sys.argv[1],
                                         sys.argv[2],
