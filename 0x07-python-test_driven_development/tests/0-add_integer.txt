@@ -42,10 +42,12 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+
 >>> add_integer(10, [])
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+
 >>> add_integer(10, {})
 Traceback (most recent call last):
 ...
@@ -59,3 +61,9 @@ TypeError: b must be an integer
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+
+>>> add_integer(24, float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
