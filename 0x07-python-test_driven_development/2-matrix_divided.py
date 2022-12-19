@@ -3,25 +3,31 @@
 
 
 def matrix_divided(matrix, div):
-    """Divides every element of a matrix
-    Args:
-        matrix (list): A list of lists of integers
-        or floats div (int/float): The divisor.
+    new_mat = list(matrix)
+    if new_mat is matrix:
+        print("help")
+    leng = len(new_mat)
+    
+    #if (all(isinstance(item, (int, float)) for item in matrix) is False):
+        #raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
-    """
+    for i in range(leng):
+        if len(new_mat[0]) != len(new_mat[i]):
+            raise TypeError("Each row of the matrix must have the same size")
 
-    if type(div) not in [int, float]:
+    if isinstance(div, (int,float)) is False:
         raise TypeError("div must be a number")
+    
     if div == 0:
-        raise ZeroDivisionError(
-            "Each row of the matrix must have the same size")
-
-    if not all(len(row) == len(matrix[0]) for row in matrix):
-        raise TypeError("Each row of the matrix must have the same size")
-    if not all(type(num) in [int, float] for row in matrix for num in row):
-        raise TypeError("matrix must be a matrix (list of lists)"
-                        " of integers/floats")
-
-    new_matrix = [[eval("{:.2f}".format(num / div)) for num in row]
-                  for row in matrix]
-    return new_matrix
+        raise ZeroDivisionError("division by zero")
+    
+    rowLength = len(new_mat[0])
+    
+    for i in range (leng):
+        for j in range(rowLength):
+            temp = new_mat[i][j]
+            if isinstance(temp, (int, float)) is False:
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            new_mat[i][j] = round(temp / div, 2)
+    
+    return (new_mat)
