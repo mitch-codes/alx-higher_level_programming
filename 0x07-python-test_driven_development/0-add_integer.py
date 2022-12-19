@@ -9,8 +9,8 @@ def add_integer(a, b=98):
         b - second number input
 
     """
-    if (isinstance(a, (int, float)) == False:
+    if (isinstance(a, (int, float)) == False):
         raise TypeError("a must be an integer")
-    if isinstance(a, (int, float)) == False:
+    if (isinstance(a, (int, float)) == False):
         raise TypeError("b must be an integer")
     return (a + b)
