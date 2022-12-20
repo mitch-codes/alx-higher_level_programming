@@ -4,11 +4,11 @@ Import the module
 >>> import sys
 >>> sys.path.insert(1, '../')
 >>> lib = __import__("4-print_square")
->>> func = lib.print_square
+>>> print_square = lib.print_square
 
 #Normal addition test
 '''
->>> func(3)
+>>> print_square(3)
 ###
 ###
 ###
@@ -16,31 +16,23 @@ Import the module
 
 #Type Errors
 
->>> func("")
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
->>> func(12.3)
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
->>> func([])
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
->>> func({})
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
->>> func(1j)
+>>> print_square("")
 Traceback (most recent call last):
 ...
 TypeError: size must be an integer
 
+>>> print_square(12.3)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
 
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
 
 #value Errors
->>> func(-1)
+>>> print_square(-1)
 Traceback (most recent call last):
 ...
 ValueError: size must be >= 0
