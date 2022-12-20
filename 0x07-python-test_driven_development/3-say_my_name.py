@@ -8,6 +8,8 @@ def say_my_name(first_name, last_name=""):
     the full name
 
     """
+    if first_name == "":
+        raise ValueError("first name must be specified")
     if isinstance(first_name, str) is False:
         raise TypeError("first_name must be a string")
     if isinstance(last_name, str) is False:
