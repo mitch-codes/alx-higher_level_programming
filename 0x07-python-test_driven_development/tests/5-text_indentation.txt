@@ -6,7 +6,6 @@ Import the module
 >>> lib = __import__("5-text_indentation")
 >>> func = lib.text_indentation
 
-#Normal addition test
 >>> func("Lorem Ipsum.?:")
 Lorem Ipsum.
 <BLANKLINE>
@@ -14,27 +13,3 @@ Lorem Ipsum.
 <BLANKLINE>
 :
 <BLANKLINE>
-
-
-#Type Errors
-
->>> func(4)
-Traceback (most recent call last):
-...
-TypeError: text must be string
->>> func(12.3)
-Traceback (most recent call last):
-...
-TypeError: text must be string
->>> func([])
-Traceback (most recent call last):
-...
-TypeError: text must be string
->>> func({})
-Traceback (most recent call last):
-...
-TypeError: text must be string
->>> func(1j)
-Traceback (most recent call last):
-...
-TypeError: text must be string
