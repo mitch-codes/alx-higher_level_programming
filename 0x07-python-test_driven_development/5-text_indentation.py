@@ -17,7 +17,7 @@ def text_indentation(text):
     for i in range(leng):
         sentence += text[i]
         if text[i] == "." or text[i] == "?" or text[i] == ":":
-            print(sentence.strip(), end="\n")
+            print(sentence.strip(), end="\n\n")
             sentence = ""
     if sentence != "":
         if sentence != " ":
