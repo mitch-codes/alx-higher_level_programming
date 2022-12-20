@@ -22,4 +22,3 @@ def text_indentation(text):
             sentence = ""
     if sentence != " ":
         print(sentence.strip())
-        print("\n")
