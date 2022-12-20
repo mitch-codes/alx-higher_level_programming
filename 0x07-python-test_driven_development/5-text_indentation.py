@@ -10,10 +10,11 @@ def text_indentation(text):
         TypeError: If text is not a string.
 
     """
-    special = ['.', '?', ':']
-    if type(text) != str:
-        raise TypeError("text must be string")
-    for x in text:
-        print(x, end='')
-        if x in special:
-            print('\n\n', end='')
+    if isinstance(text, str) is False:
+        raise TypeError("text must be a string")
+    leng = len(text)
+    for i in range(leng):
+        if text[i] == "." or text[i] == "?" or text[i] == ":":
+            print("\n")
+        else:
+            print(text[i], end="")
