@@ -4,12 +4,20 @@ Import the module
 >>> import sys
 >>> sys.path.insert(1, '../')
 >>> lib = __import__("5-text_indentation")
->>> func = lib.text_indentation
+>>> text_indentation = lib.text_indentation
 
->>> func("Lorem Ipsum.?:")
+#normal operations
+>>> text_indentation("Lorem Ipsum.?:")
 Lorem Ipsum.
 <BLANKLINE>
 ?
 <BLANKLINE>
 :
 <BLANKLINE>
+
+#raised errors
+>>> text_indentation(2)
+TraceBack (most recent call)
+...
+TypeError: text must be a string
+
