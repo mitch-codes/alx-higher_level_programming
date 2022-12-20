@@ -9,4 +9,6 @@ class TestMax(unittest.TestCase):
     def test_max_func(self):
         self.assertEqual(max_integer([1, 2, 3]), 3)
         self.assertEqual(max_integer([1, 2, -3]), 2)
+        self.assertEqual(max_integer([]), None)
+        self.assertEqual(max_integer([1]), 1)
         self.assertRaises(TypeError, max_integer, [1, 2, "a"])
