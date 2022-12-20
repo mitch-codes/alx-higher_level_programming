@@ -17,7 +17,7 @@ Lorem Ipsum.
 
 #raised errors
 >>> text_indentation(2)
-TraceBack (most recent call)
+Traceback (most recent call last):
 ...
 TypeError: text must be a string
 
