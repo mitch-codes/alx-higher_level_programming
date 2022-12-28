@@ -7,11 +7,11 @@ def safe_print_list_integers(my_list=[], x=0):
     a list and only integers.
     """
     count = 0
-    for element in range(0, x):
+    for element in range(x):
         try:
             print("{:d}".format(my_list[element]), end="")
             count += 1
         except (ValueError, TypeError):
-            continue
+            pass
     print("")
     return count
