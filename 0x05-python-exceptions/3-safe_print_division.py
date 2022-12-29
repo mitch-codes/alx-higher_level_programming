@@ -7,9 +7,9 @@ def safe_print_division(a, b):
     and prints the result.
     """
     try:
-        num_div = a / b
+        c = a / b
     except (TypeError, ZeroDivisionError):
-        num_div = None
+        c = None
     finally:
-        print("Inside result: {}".format(num_div))
-    return num_div
+        print("Inside result: {}".format(c))
+        return (c)
