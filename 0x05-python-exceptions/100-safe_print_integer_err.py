@@ -8,6 +8,7 @@ def safe_print_integer_err(value):
     A function that prints an integer
     """
     result = False
+
     try:
         print("{:d}".format(value))
         result = True
