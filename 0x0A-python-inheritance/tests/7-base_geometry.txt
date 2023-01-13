@@ -1,0 +1,8 @@
+#this text file tests raised errors
+
+"""
+check errors are raised
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", "John")
+"""
