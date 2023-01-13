@@ -13,7 +13,7 @@ class Square(Rectangle):
 
     def __str__(self):
         return ("[{}] {}/{}"
-        .format(self.__class__.__name__, self.__size, self.__size))
+                .format(self.__class__.__name__, self.__size, self.__size))
 
     def area(self):
         return (self.__size * self.__size)
