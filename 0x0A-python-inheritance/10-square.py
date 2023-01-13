@@ -10,7 +10,6 @@ class Square(Rectangle):
     def __init__(self, size):
         BaseGeometry.integer_validator(self, "size", size) 
         self.__size = size
-        print (self.__size)
 
     def __str__(self):
         return ("[{}] {}/{}"
