@@ -8,7 +8,7 @@ class Square(Rectangle):
     "an inheritence of class rectangle"
 
     def __init__(self, size):
-        BaseGeometry.integer_validator(self, "size", size) 
+        super().integer_validator("size", size)
         self.__size = size
 
     def __str__(self):
