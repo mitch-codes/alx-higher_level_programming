@@ -7,5 +7,5 @@ def is_same_class(obj, a_class):
     is a method of a class
 
     """
-    result = isinstance(obj, a_class)
+    result = type(obj) is a_class
     return result
