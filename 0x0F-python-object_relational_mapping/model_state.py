@@ -1,22 +1,14 @@
 #!/usr/bin/python3
-"""use sqlalchemy to connect to database"""
-
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String
+"""create a base fro the table state"""
+from sqlalchemy.ext.declarative import declarative_Base
+form sqlalchemy import Column, Integer, String
 
 Base = declarative_base()
 
-
 class State(Base):
-    """State class
-
-    Attributes:
-        __tablename__ (str): The table name of the class
-        id (int): The State id of the class
-        name (str): The State name of the class
-
-    """
-    __tablename__ = 'states'
+    """State class represents table states"""
+    __tablename__ = "states"
 
     id = Column(Integer, primary_key=True)
-    name = Column(String(128), nullable=False)
+    name= Column(String(128), nullable=False)
+    
