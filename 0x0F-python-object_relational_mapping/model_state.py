@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""create a base fro the table state"""
+"""use sqlalchemy to connect to database"""
+
 from sqlalchemy.ext.declarative import declarative_Base
 from sqlalchemy import Column, Integer, String
 
