@@ -12,5 +12,5 @@ if __name__ == "__main__":
     rows = cur.fetchall()
     for row in rows:
         if row[2] == sys.argv[4]:
-            result = result + row[1]
-    print(result)
+            result = result + row[1] + ", "
+    print(result[1:-2])
