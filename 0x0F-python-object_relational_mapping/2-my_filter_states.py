@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """script that uses user input in mysql"""
-import 	MySQLdb
+import MySQLdb
 import sys
 
 if __name__ == "__main__":
