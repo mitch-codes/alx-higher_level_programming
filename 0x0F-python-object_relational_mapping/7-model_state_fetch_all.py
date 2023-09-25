@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""connect to database python using sqlalchemy"""
+"""use sqlalchemy to connect to database"""
 
 import sys
 from sqlalchemy import create_engine
