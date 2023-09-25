@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""connect to database python"""
+"""use inner join with mysqldb"""
 import sys
-import 	MySQLdb
+import MySQLdb
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    db = MySQLdb.connect(user=sys.argv[0], passwd=sys.argv[1], db=sys.argv[2])
     cur = db.cursor()
-    cur.execute("SELECT cities.id, cities.name, states.name FROM cities JOIN states ON (cities.state_id = states.id) ORDER BY cities.id ASC")
-    rows = cur.fetchall()
-    for row in rows:
+
+    cur.execute("SELECT states.id, cites.name, states.name FROM states INNER JOIN cities WHERE states.id = cities.state_id ORDER BY state.id")
+    results = cur.fetchall()
+    for row in results:
         print(row)
-    cur.close()
-    db.close()
