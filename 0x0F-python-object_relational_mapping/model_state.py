@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """create a base fro the table state"""
-from sqlalchemy.ext.declarative import declarative_Base
-form sqlalchemy import Column, Integer, String
+from SQLAlchemy.ext.declarative import declarative_Base
+form SQLAlchemy import Column, Integer, String
 
 Base = declarative_base()
 
