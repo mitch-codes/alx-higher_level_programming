@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """selct id and name where name follows pattern"""
-import 	MySQLdb
+import MySQLdb
 import sys
 
 db = MySQLdb.connect(user=sys.argv[1], passwd=sys.agrv[2], port=3306, db=sys.argv[3])
