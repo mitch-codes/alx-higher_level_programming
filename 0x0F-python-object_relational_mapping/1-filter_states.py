@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""selct id and name where name follows pattern"""
+"""selct id and name where name follows pattern
+"""
 import MySQLdb
 import sys
 
