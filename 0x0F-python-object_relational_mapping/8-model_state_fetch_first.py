@@ -13,7 +13,4 @@ if __name__ == "__main__":
     session = sessionmaker()
     myrow = session.query(State.id, State.name).order_by(State.id).first()
     for row in myrow:
-        if (row is not null):
-            print("%s: %s" % (row.id, row.name))
-        else:
-            print()
+        print("%s: %s" % (row.id, row.name))
