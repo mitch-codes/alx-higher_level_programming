@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """use sqlalchemy to connect to database"""
 
-from sqlalchemy.ext.declarative import declarative_Base
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 
 Base = declarative_base()
+
 
 class State(Base):
     """State class
@@ -15,8 +16,7 @@ class State(Base):
         name (str): The State name of the class
 
     """
-    __tablename__ = "states"
+    __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True)
-    name= Column(String(128), nullable=False)
-    
+    name = Column(String(128), nullable=False)
