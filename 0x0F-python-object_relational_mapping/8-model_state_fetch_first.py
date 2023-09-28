@@ -9,8 +9,8 @@ from model_state import Base, State
 
 
 if __name__ == "__main__":
-    engine = create_engine("mysql://"+sys.argv[1]+":"+sys.argv[2]+"@localhost:3306/"+sys.argv[3])
-    session = sessionmaker(bind=engine)
-    myrow = session.query(State.id, State.name).order_by(State.id).first()
-    for row in myrow:
-        print("%s: %s" % (row.id, row.name))
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".format(sys.argv[1], sys.argv[2], sys.argv[3]))
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    myrow = session.query(State).order_by(State.id).first()
+    print("{}: {}".format(myrow.id, myrow.name))
