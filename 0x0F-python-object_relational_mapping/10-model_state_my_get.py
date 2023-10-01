@@ -10,5 +10,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     myrows = session.query(State).filter(State.name == sys.argv[4])
-    for row in myrows:
-        print(row.id)
+    if myrows.count() > 0:
+        print(myrows[0].id)
+    else:
+        print("Not found")
