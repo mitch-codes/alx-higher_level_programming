@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+"""use sqlalchemy to connect to database"""
+
 from sqlalchemy import Column, String, Integer, ForeignKey
 from sqlalchemy.orm import relationship
 from model_state import Base, State
